@@ -9,7 +9,13 @@ import timelineLogo1 from "../assets/TimeLineLogo/Logo1.svg";
 import timelineLogo2 from "../assets/TimeLineLogo/Logo2.svg";
 import timelineLogo3 from "../assets/TimeLineLogo/Logo3.svg";
 import timelineLogo4 from "../assets/TimeLineLogo/Logo4.svg";
-import timeLineImage from '../assets/Images/TimelineImage.png'
+import timeLineImage from "../assets/Images/TimelineImage.png";
+import knowYourProgress from '../assets/Images/Know_your_progress.png'
+import compareWithOthers from '../assets/Images/Compare_with_others.png'
+import planYourLesson from '../assets/Images/Plan_your_lessons.png'
+import InstructorSection from "../components/HomePage/InstructorSection";
+import ExploreMore from "../components/HomePage/ExploreMore";
+
 
 function Home() {
   return (
@@ -100,6 +106,11 @@ function Home() {
             codeColor={"text-blue-300"}
           />
         </div>
+
+          <div className="mt-48">
+            <ExploreMore />
+          </div>
+
       </div>
 
       {/* section 2 */}
@@ -147,9 +158,9 @@ function Home() {
                 <img src={timelineLogo2} className="w-full h-full" />
               </div>
               <div className="font-bold text-md">
-              Responsibility{" "}
+                Responsibility{" "}
                 <p className="text-sm font-normal">
-                Students will always be our top priority
+                  Students will always be our top priority
                 </p>
               </div>
             </div>
@@ -160,9 +171,9 @@ function Home() {
                 <img src={timelineLogo3} className="w-full h-full" />
               </div>
               <div className="font-bold text-md">
-              Flexibility{" "}
+                Flexibility{" "}
                 <p className="text-sm font-normal">
-                The ability to switch is an important skills
+                  The ability to switch is an important skills
                 </p>
               </div>
             </div>
@@ -173,9 +184,9 @@ function Home() {
                 <img src={timelineLogo4} className="w-full h-full" />
               </div>
               <div className="font-bold text-md">
-              Solve the problem{" "}
+                Solve the problem{" "}
                 <p className="text-sm font-normal">
-                Code your way to a solution
+                  Code your way to a solution
                 </p>
               </div>
             </div>
@@ -183,14 +194,57 @@ function Home() {
           {/* right-part */}
           <div>
             <div className="relative">
-                <img src={timeLineImage} alt="" />
-                <div>
-                    <div className="bg-caribbeangreen-700 flex p-4 text-white gap-4 items-center border-r-[1px] border-caribbeangreen-300 border-solid"><h2 className="font-extrabold text-2xl">10</h2> <p className="text-[10px] text-caribbeangreen-300">YEARS <br></br>EXPERIENCE</p></div>
-                    <div className="bg-caribbeangreen-700 flex p-4 text-white gap-4 items-center border-r-[1px] border-caribbeangreen-300 border-solid"><h2 className="font-extrabold text-2xl">50</h2> <p className="text-[10px] text-caribbeangreen-300">TYPES <br></br>OF COURSES</p></div>
+              <img src={timeLineImage} alt="" />
+              <div className="py-5 absolute left-[50%] -translate-x-[50%] translate-y-[50%] bottom-0  bg-caribbeangreen-700 flex items-center justify-center ">
+                <div className="h-[50%] flex justify-center w-full">
+                  <div className="bg-caribbeangreen-700 flex p-4 h-[20px] text-white gap-4 pr-8 items-center border-r-[1px] border-caribbeangreen-300 border-solid">
+                    <h2 className="font-extrabold text-2xl">10</h2>{" "}
+                    <p className="text-[10px] text-caribbeangreen-300">
+                      YEARS <br></br>EXPERIENCE
+                    </p>
+                  </div>
+                  {/* <div className="border-[0.5px] border-caribbeangreen-300 border-solid"></div> */}
+                  <div className="bg-caribbeangreen-700 flex p-4 h-[20px] text-white gap-4 pl-8 items-center border-l-[1px] border-caribbeangreen-300 border-solid">
+                    <h2 className="font-extrabold text-2xl">250</h2>{" "}
+                    <p className="text-[10px] text-caribbeangreen-300 max-w-maxContent">
+                      TYPES <br></br>OF COURSES
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* card section  */}
+        <div className="mx-auto mt-10 w-11/12 flex flex-col justify-between items-center max-w-maxContent py-10">
+          <div className="text-4xl font-inter font-bold">
+            Your swiss knife for{" "}
+            <HighlightText text={"learning any language"} />
+          </div>
+          <div className="w-[60%] mt-2 text-center text-[16px]">
+            Using spin making learning multiple languages easy. with 20+
+            languages realistic voice-over, progress tracking, custom schedule
+            and more
+          </div>
+          <div className="flex justify-center items-center">
+            <img src={knowYourProgress}  className="object-contain -mr-32 -mt-12"/>
+            <img src={compareWithOthers}  className="object-contain " />
+            <img src={planYourLesson}  className="object-contain -ml-36 -mt-12" />
+          </div>
+          <div className="mt-10">
+            <CTAButton active={true} linkTo={'#'}>
+              Learn more
+            </CTAButton>
+          </div>
+        </div>
+
+      </div>
+
+      {/* section 3 */}
+      <div className="mx-auto w-11/12 flex flex-col items-center max-w-maxContent p-4">
+            <InstructorSection />
+            <h1 className="text-3xl mt-20">Review from other learners</h1>
       </div>
     </div>
   );
