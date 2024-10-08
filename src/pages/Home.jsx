@@ -15,6 +15,7 @@ import compareWithOthers from '../assets/Images/Compare_with_others.png'
 import planYourLesson from '../assets/Images/Plan_your_lessons.png'
 import InstructorSection from "../components/HomePage/InstructorSection";
 import ExploreMore from "../components/HomePage/ExploreMore";
+import Footer from "../components/HomePage/Footer";
 
 
 function Home() {
@@ -245,6 +246,12 @@ function Home() {
       <div className="mx-auto w-11/12 flex flex-col items-center max-w-maxContent p-4">
             <InstructorSection />
             <h1 className="text-3xl mt-20">Review from other learners</h1>
+      </div> 
+
+      {/* footer Section  */}
+      <div className='w-full bg-richblack-800'>
+        <Footer />
+
       </div>
     </div>
   );
