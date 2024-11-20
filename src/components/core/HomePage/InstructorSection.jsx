@@ -1,5 +1,5 @@
 import React from "react";
-import instructorImage from "../../assets/Images/Instructor.png";
+import instructorImage from "../../../assets/Images/Instructor.png";
 import HighlightText from "./HighlightText";
 import CTAButton from "./Button";
 import { FaArrowRight } from "react-icons/fa6";

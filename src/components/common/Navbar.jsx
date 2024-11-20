@@ -4,11 +4,13 @@ import navLogo from '../../assets/Logo/Logo-Full-Light.png'
 import { Link, matchPath, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { FaShoppingCart } from "react-icons/fa";
-import ProfileDropdown from '../Auth/ProfileDropdown'
-import { apiConnector } from '../../services/apiConnector'
+
+
 import { categories } from '../../services/api'
 import { IoIosArrowDown } from "react-icons/io";
 import axios from 'axios'
+import ProfileDropdown from '../core/Auth/ProfileDropDown'
+import { apiConnector } from '../../services/apiconnector'
 
 const subLinks = [{title:"python",path:"/course/python"},{title:"Java",path:"/course/java"},]
 
@@ -22,8 +24,8 @@ function Navbar() {
 
     const fetchCategories = async () => {
         try {
-            // const result = await apiConnector('GET',categories.CATEGORIES_API);
-            const result = await axios.get('http://localhost:3000/api/v1/course/showAllCategories');
+            const result = await apiConnector('GET',categories.CATEGORIES_API);
+            // const result = await axios.get('http://localhost:3000/api/v1/course/showAllCategories');
             console.log("category_list: ",result);
             console.log("category_list_Data: ",result.data);
             setSsubLinks(result.data.data);
@@ -39,6 +41,9 @@ function Navbar() {
     useEffect(()=>{
         fetchCategories();
     },[]);
+
+    console.log('fetched_subLinks: ',ssubLinks);
+    console.log('baseURL: ',process.env.REACT_APP_BASE_URL);
 
     function matchRoute(route){
         return matchPath({path:route},location.pathname);

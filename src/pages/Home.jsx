@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
-import HighlightText from "../components/HomePage/HighlightText";
-import CTAButton from "../components/HomePage/Button";
 import boxoffice from "../assets/Images/boxoffice.png";
-import CodeBlocks from "../components/HomePage/CodeBlocks";
+import CodeBlocks from "../components/core/HomePage/CodeBlocks";
 import timelineLogo1 from "../assets/TimeLineLogo/Logo1.svg";
 import timelineLogo2 from "../assets/TimeLineLogo/Logo2.svg";
 import timelineLogo3 from "../assets/TimeLineLogo/Logo3.svg";
@@ -13,9 +11,14 @@ import timeLineImage from "../assets/Images/TimelineImage.png";
 import knowYourProgress from '../assets/Images/Know_your_progress.png'
 import compareWithOthers from '../assets/Images/Compare_with_others.png'
 import planYourLesson from '../assets/Images/Plan_your_lessons.png'
-import InstructorSection from "../components/HomePage/InstructorSection";
-import ExploreMore from "../components/HomePage/ExploreMore";
-import Footer from "../components/HomePage/Footer";
+import InstructorSection from "../components/core/HomePage/InstructorSection";
+import ExploreMore from "../components/core/HomePage/ExploreMore";
+import Footer from "../components/common/Footer";
+import HighlightText from "../components/core/HomePage/HighlightText";
+import CTAButton from '../components/core/HomePage/Button';
+import TimelineSection from '../components/core/HomePage/TimelineSection'
+import LearningLanguageSection from '../components/core/HomePage/LearningLanguageSection'
+
 
 
 function Home() {
@@ -239,6 +242,9 @@ function Home() {
             </CTAButton>
           </div>
         </div>
+        <TimelineSection />
+
+        <LearningLanguageSection />
 
       </div>
 
