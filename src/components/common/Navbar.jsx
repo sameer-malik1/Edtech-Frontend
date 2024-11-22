@@ -10,7 +10,7 @@ import { categories } from '../../services/api'
 import { IoIosArrowDown } from "react-icons/io";
 import axios from 'axios'
 import ProfileDropdown from '../core/Auth/ProfileDropDown'
-import { apiConnector } from '../../services/apiconnector'
+import  {apiConnector}  from '../../services/apiconnector'
 
 const subLinks = [{title:"python",path:"/course/python"},{title:"Java",path:"/course/java"},]
 
