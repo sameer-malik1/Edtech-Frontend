@@ -7,11 +7,11 @@ const initialState = {
 const profileSlice = createSlice({
     name:'profile',
     initialState: initialState,
-    reducers:{
-        setToken(state,value){
+    reducers: {
+        setUser(state, value) {
             state.user = value.payload;
-        }
-    }
+        },
+    },
 })
 
 export const {setUser} = profileSlice.actions;

@@ -26,7 +26,7 @@ function Navbar() {
         try {
             const result = await apiConnector('GET',categories.CATEGORIES_API);
             // const result = await axios.get('http://localhost:3000/api/v1/course/showAllCategories');
-            console.log("category_list: ",result);
+           
             console.log("category_list_Data: ",result.data);
             setSsubLinks(result.data.data);
 
@@ -42,12 +42,12 @@ function Navbar() {
         fetchCategories();
     },[]);
 
-    console.log('fetched_subLinks: ',ssubLinks);
-    console.log('baseURL: ',process.env.REACT_APP_BASE_URL);
+    
 
     function matchRoute(route){
         return matchPath({path:route},location.pathname);
     }
+    console.log("token after login: ",token);
   return (
     <div className='flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700'>
         <div className='flex w-11/12 max-w-maxContent items-center justify-between px-[5%] '>

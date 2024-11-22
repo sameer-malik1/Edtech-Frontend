@@ -8,6 +8,7 @@ function UpdatePassword() {
     const {loading} = useSelector(state=> state.auth);
     const dispatch = useDispatch();
     const location = useLocation();
+    
     const [showPassword,setShowPassword] = useState(false);
     const [showConfirmPassword,setShowConfirmPassword] = useState(false);
 
@@ -25,7 +26,7 @@ function UpdatePassword() {
     function handleOnSubmit(e){
         e.preventDefault();
         const token = location.pathname.split('/').at(-1);
-        dispatch(resetPassword(password,confirmPassword,token));
+        dispatch(resetPassword(formData.password,formData.confirmPassword,token));
 
     }
   return (
@@ -45,6 +46,7 @@ function UpdatePassword() {
                                 name='password'
                                 value={FormData.password}
                                 onChange={handleOnChange}
+                                className='text-black'
                                  />
 
                         </label>
@@ -56,6 +58,7 @@ function UpdatePassword() {
                                 name='confirmPassword'
                                 value={FormData.confirmPassword}
                                 onChange={handleOnChange}
+                                className='text-black'
                                  />
 
                         </label>
