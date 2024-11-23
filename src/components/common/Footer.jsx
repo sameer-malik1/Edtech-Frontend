@@ -10,8 +10,8 @@ import { FaYoutube } from "react-icons/fa";
 function Footer() {
   console.log("data fotter: ", FooterLink2);
   return (
-    <div className="w-11/12   mx-auto  ">
-      <div className="flex gap-10 py-5 pt-12  justify-evenly  ">
+    <div className="w-full   mx-auto bg-richblack-800  ">
+      <div className="flex gap-10 py-5 pt-12 px-20  justify-evenly  ">
         {/* 1 columns */}
         <div className="text-richblack-500 flex flex-col gap-2">
           <img src={logo} alt="logo" />
@@ -113,7 +113,7 @@ function Footer() {
         {/* 5 columns */}
         {/* 6 columns */}
       </div>
-      <div className="flex justify-between w-full py-6 text-richblack-500 border-solid  border-richblack-700 border-t-[1px]">
+      <div className="flex justify-between w-full py-6 px-10  text-richblack-500 border-solid  border-richblack-700 border-t-[1px]">
         <div className="flex gap-4 ">
           <Link to={"#"}>
             <p>Privacy Policy</p>

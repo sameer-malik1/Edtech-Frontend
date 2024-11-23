@@ -7,6 +7,7 @@ import foundingStory from "../assets/Images/FoundingStory.png";
 import StatsComponent from "../components/core/AboutPage/StatsComponent";
 import LearningGrid from "../components/core/AboutPage/LearningGrid";
 import ContactUsSection from "../components/core/AboutPage/ContactUsSection";
+import Footer from "../components/common/Footer";
 
 function About() {
   return (
@@ -139,6 +140,9 @@ function About() {
       <section>
         <ContactUsSection />
       </section>
+
+      {/* footer  */}
+      <Footer />
     </div>
   );
 }

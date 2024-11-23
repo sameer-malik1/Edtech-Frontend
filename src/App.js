@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 function App() {
   return (
     <div className="w-screen min-h-screen bg-richblack-900 text-white font-inter">
@@ -16,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route
-          path="signup"
+          path="/signup"
           element={
             <OpenRoute>
               <Signup />
@@ -24,7 +25,7 @@ function App() {
           }
         />
     <Route
-          path="login"
+          path="/login"
           element={
             <OpenRoute>
               <Login />
@@ -40,7 +41,7 @@ function App() {
         }
         />
         <Route
-          path="update-password/:id"
+          path="/update-password/:id"
           element={
             <OpenRoute>
               <UpdatePassword />
@@ -48,7 +49,7 @@ function App() {
           }
         /> 
         <Route 
-        path="verify-email"
+        path="/verify-email"
         element={
           <OpenRoute>
             <VerifyEmail />
@@ -56,13 +57,16 @@ function App() {
         }
         /> 
         <Route 
-        path="about"
+        path="/about"
         element={
           <OpenRoute>
             <About />
           </OpenRoute>
         }
         />
+
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="dashboard/my-profile" element={<MyProfile/>} />
     
       </Routes>
     </div>
