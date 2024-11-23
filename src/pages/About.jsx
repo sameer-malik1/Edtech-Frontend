@@ -6,6 +6,7 @@ import banner3 from "../assets/Images/aboutus3.webp";
 import foundingStory from "../assets/Images/FoundingStory.png";
 import StatsComponent from "../components/core/AboutPage/StatsComponent";
 import LearningGrid from "../components/core/AboutPage/LearningGrid";
+import ContactUsSection from "../components/core/AboutPage/ContactUsSection";
 
 function About() {
   return (
@@ -132,6 +133,11 @@ function About() {
       {/* section 5 */}
       <section>
         <LearningGrid />
+      </section>
+
+      {/* section 6  */}
+      <section>
+        <ContactUsSection />
       </section>
     </div>
   );

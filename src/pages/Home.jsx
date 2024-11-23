@@ -15,7 +15,7 @@ import InstructorSection from "../components/core/HomePage/InstructorSection";
 import ExploreMore from "../components/core/HomePage/ExploreMore";
 import Footer from "../components/common/Footer";
 import HighlightText from "../components/common/HighlightText";
-import CTAButton from '../components/core/HomePage/Button';
+import CTAButton from '../components/common/Button';
 import TimelineSection from '../components/core/HomePage/TimelineSection'
 import LearningLanguageSection from '../components/core/HomePage/LearningLanguageSection'
 
