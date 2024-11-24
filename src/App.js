@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import MyProfile from "./components/core/DashboardPage/MyProfile";
 import PrivateRoute from "./components/core/Auth/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
+import Settings from "./components/core/DashboardPage/settings/Settings";
 function App() {
   return (
     <div className="w-screen min-h-screen bg-richblack-900 text-white font-inter">
@@ -72,11 +73,12 @@ function App() {
             <Dashboard />
 
         </PrivateRoute>}
-        />
+        >
 
         <Route path="/contact" element={<Contact/>} />
         <Route path="dashboard/my-profile" element={<MyProfile />} />
       <Route path="dashboard/Settings" element={<Settings />} />
+      </Route>
     
       </Routes>
     </div>

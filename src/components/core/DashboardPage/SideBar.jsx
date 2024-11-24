@@ -5,14 +5,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import SideBarLink from './SideBarLink';
 import { VscSignOut } from "react-icons/vsc";
 import ConfirmationModal from '../../common/ConfirmationModal';
+import { useNavigate } from 'react-router-dom';
 
 
 function SideBar() {
     const {loading:authLoading} = useSelector(state => state.auth);
-    const {loading:profileLoading} = useSelector(state => state.profile);
-    const {user} = useSelector(state=>state.profile);
+    const {user,loading:profileLoading} = useSelector(state => state.profile);
     const [confirmationModal,setConfirmationModal] = useState(null);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     if(profileLoading || authLoading){
         return <div className='mt-10'>Loading ...</div>
@@ -29,19 +30,19 @@ function SideBar() {
       <div className='h-[1px] bg-richblack-700 mb-6 mt-6'></div>
 
       <div className='flex flex-col'>
-        <sidebarLinks link={{name:"Settings",path:"dashboard/settings"}} iconName="VscSettingsGear"/>
+        <SideBarLink link={{name:"Settings",path:"/dashboard/settings"}} iconName="VscSettingsGear"/>
         <button onClick={()=>setConfirmationModal({
-            Heading: "Are you sure ?",
-            Description: "you will be logged out of your Account.",
-            bt1Handler: ()=>(dispatch(logout())),
+            modalHeading: "Are you sure ?",
+            modalDescription: "you will be logged out of your Account.",
+            btn1Handler: ()=>(dispatch(logout(navigate))),
             btn2Handler: ()=>(setConfirmationModal(null)),
             btn1Text: "Logout",
             btn2Text:"Cancel"
         })}
-        className='text-sm font-medium text-richblack-300'>
+        className='text-lg px-8 py-2 font-medium text-richblack-300'>
           <div className='flex items-center gap-2'>
             <VscSignOut />
-            <span>Logout</span>
+            <span className='text-sm'>Logout</span>
 
           </div>
 
