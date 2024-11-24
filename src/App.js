@@ -10,6 +10,9 @@ import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import MyProfile from "./components/core/DashboardPage/MyProfile";
+import PrivateRoute from "./components/core/Auth/PrivateRoute";
+import Dashboard from "./pages/Dashboard";
 function App() {
   return (
     <div className="w-screen min-h-screen bg-richblack-900 text-white font-inter">
@@ -63,6 +66,12 @@ function App() {
             <About />
           </OpenRoute>
         }
+        />
+        <Route element={ 
+          <PrivateRoute>
+            <Dashboard />
+
+        </PrivateRoute>}
         />
 
         <Route path="/contact" element={<Contact/>} />
